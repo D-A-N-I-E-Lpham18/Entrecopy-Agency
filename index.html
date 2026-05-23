@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>entrecopy — Solo Copywriting Agency & Portfolio</title>
+    <meta
+      name="description"
+      content="entrecopy is a solo copywriting studio crafting cinematic, conversion-driven words for ambitious brands. Website copy, content strategy, and brand messaging."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: "#F9F6F0",
+              "cream-deep": "#F2EDE2",
+              charcoal: "#2C3539",
+              "charcoal-soft": "#3A4347",
+              "charcoal-deep": "#1F2528",
+              burnt: "#C85A17",
+              "burnt-dark": "#A8480F",
+              "burnt-light": "#E07A38",
+            },
+            fontFamily: {
+              serif: ['"Fraunces"', "ui-serif", "Georgia", "serif"],
+              sans: ['"Inter"', "ui-sans-serif", "system-ui", "sans-serif"],
+            },
+            boxShadow: {
+              "inset-deep": "inset 0 4px 12px rgba(0,0,0,0.3)",
+              "inset-deeper":
+                "inset 0 6px 24px rgba(0,0,0,0.35), inset 0 -2px 6px rgba(255,255,255,0.04)",
+              tactile:
+                "0 20px 40px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04)",
+              "tactile-hover":
+                "0 30px 60px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.06)",
+              press: "0 8px 18px rgba(200,90,23,0.35)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        background-color: #f9f6f0;
+        color: #2c3539;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .font-display {
+        font-family: "Fraunces", Georgia, serif;
+        font-optical-sizing: auto;
+        font-variation-settings: "opsz" 144;
+        letter-spacing: -0.02em;
+      }
+
+      /* Brand mark dot above the 'y' */
+      .brand-y {
+        position: relative;
+        display: inline-block;
+      }
+      .brand-y::after {
+        content: "";
+        position: absolute;
+        top: -0.18em;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0.32em;
+        height: 0.32em;
+        border-radius: 9999px;
+        background: #c85a17;
+        box-shadow:
+          0 2px 4px rgba(200, 90, 23, 0.45),
+          inset 0 -1px 1px rgba(0, 0, 0, 0.18);
+      }
+
+      /* Carved inset hero panel — paper texture */
+      .carved-inset {
+        background:
+          radial-gradient(
+            120% 80% at 50% 0%,
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0) 60%
+          ),
+          linear-gradient(180deg, #f1ebdc 0%, #ece4d0 100%);
+        box-shadow:
+          inset 0 4px 12px rgba(0, 0, 0, 0.3),
+          inset 0 -2px 6px rgba(255, 255, 255, 0.55);
+      }
+      .carved-inset::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          radial-gradient(
+            rgba(44, 53, 57, 0.06) 1px,
+            transparent 1px
+          );
+        background-size: 4px 4px;
+        opacity: 0.5;
+        mix-blend-mode: multiply;
+        border-radius: inherit;
+      }
+
+      /* Tactile card surface — marble/clay feel */
+      .tactile-card {
+        background:
+          linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #faf6ec 100%
+          );
+        box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.08),
+          0 4px 8px rgba(0, 0, 0, 0.04),
+          inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        transition:
+          transform 450ms cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 450ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .tactile-card:hover {
+        transform: translateY(-10px);
+        box-shadow:
+          0 30px 60px rgba(0, 0, 0, 0.12),
+          0 8px 16px rgba(0, 0, 0, 0.06),
+          inset 0 1px 0 rgba(255, 255, 255, 1);
+      }
+
+      /* Primary pressable button */
+      .btn-primary {
+        background: linear-gradient(180deg, #d36621 0%, #b54e10 100%);
+        color: #fff8ec;
+        box-shadow:
+          0 10px 22px rgba(200, 90, 23, 0.32),
+          inset 0 1px 0 rgba(255, 255, 255, 0.28),
+          inset 0 -2px 0 rgba(0, 0, 0, 0.18);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          filter 180ms ease;
+      }
+      .btn-primary:hover {
+        filter: brightness(1.04);
+        box-shadow:
+          0 14px 28px rgba(200, 90, 23, 0.38),
+          inset 0 1px 0 rgba(255, 255, 255, 0.32),
+          inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+      }
+      .btn-primary:active {
+        transform: scale(0.95);
+        box-shadow:
+          0 4px 10px rgba(200, 90, 23, 0.28),
+          inset 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: #2c3539;
+        transition: transform 180ms ease, color 180ms ease;
+      }
+      .btn-ghost:hover {
+        color: #c85a17;
+      }
+      .btn-ghost:active {
+        transform: scale(0.96);
+      }
+
+      /* Portfolio dark overlay */
+      .portfolio-card .overlay {
+        opacity: 0;
+        transition: opacity 400ms ease;
+      }
+      .portfolio-card:hover .overlay {
+        opacity: 1;
+      }
+      .portfolio-card img,
+      .portfolio-card .img {
+        transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .portfolio-card:hover img,
+      .portfolio-card:hover .img {
+        transform: scale(1.06);
+      }
+
+      /* Subtle grain over the whole page */
+      .grain::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 60;
+        opacity: 0.04;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+      }
+
+      /* Hero placeholder image — desaturated portrait composition */
+      .portrait-art {
+        background:
+          radial-gradient(
+            60% 50% at 50% 35%,
+            rgba(255, 230, 200, 0.55) 0%,
+            rgba(255, 230, 200, 0) 60%
+          ),
+          radial-gradient(
+            80% 70% at 50% 100%,
+            rgba(44, 53, 57, 0.75) 0%,
+            rgba(44, 53, 57, 0) 60%
+          ),
+          linear-gradient(160deg, #b7a991 0%, #6b6359 55%, #2c3539 100%);
+        filter: saturate(0.6) contrast(1.05);
+      }
+
+      /* Input styling inside dark block */
+      .field {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(249, 246, 240, 0.12);
+        color: #f9f6f0;
+        transition: border-color 200ms ease, background 200ms ease,
+          box-shadow 200ms ease;
+      }
+      .field::placeholder {
+        color: rgba(249, 246, 240, 0.45);
+      }
+      .field:focus {
+        outline: none;
+        border-color: rgba(200, 90, 23, 0.7);
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 0 0 4px rgba(200, 90, 23, 0.15);
+      }
+
+      /* Reveal on scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 800ms cubic-bezier(0.2, 0.8, 0.2, 1),
+          transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal,
+        .tactile-card,
+        .btn-primary,
+        .portfolio-card img,
+        .portfolio-card .img {
+          transition: none !important;
+          transform: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="grain antialiased">
+    <!-- Navigation -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-cream/80 border-b border-charcoal/5"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between"
+      >
+        <a href="#top" class="flex items-center gap-2 group">
+          <span
+            class="font-display font-extrabold text-2xl tracking-tight text-charcoal"
+          >
+            entrecop<span class="brand-y">y</span>
+          </span>
+        </a>
+
+        <ul
+          class="hidden md:flex items-center gap-10 text-sm font-medium text-charcoal/80"
+        >
+          <li>
+            <a class="hover:text-burnt transition-colors" href="#services"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-burnt transition-colors" href="#portfolio"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-burnt transition-colors" href="#about"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-burnt transition-colors" href="#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="#contact"
+          class="btn-primary rounded-full px-5 py-2.5 text-sm font-semibold tracking-wide"
+        >
+          Book a Session
+        </a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="px-6 lg:px-10 pt-10 lg:pt-16">
+        <div
+          class="relative max-w-7xl mx-auto carved-inset rounded-[36px] overflow-hidden"
+        >
+          <div
+            class="relative grid lg:grid-cols-12 gap-10 lg:gap-6 px-8 sm:px-12 lg:px-16 py-16 lg:py-24"
+          >
+            <div class="lg:col-span-7 flex flex-col justify-center reveal">
+              <div
+                class="inline-flex items-center gap-2 self-start mb-8 px-3 py-1.5 rounded-full bg-charcoal/5 border border-charcoal/10"
+              >
+                <span class="w-1.5 h-1.5 rounded-full bg-burnt"></span>
+                <span
+                  class="text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal/70"
+                >
+                  Solo copywriting studio · est. 2019
+                </span>
+              </div>
+
+              <h1
+                class="font-display font-semibold text-charcoal leading-[0.95] text-[44px] sm:text-6xl lg:text-7xl xl:text-[88px]"
+              >
+                Words that
+                <span class="text-burnt italic">earn</span>
+                attention —<br />
+                and
+                <span class="text-burnt italic">return</span>
+                on it.
+              </h1>
+
+              <p
+                class="mt-8 max-w-xl text-lg leading-relaxed text-charcoal/70"
+              >
+                I'm a solo copywriter for founders and creative teams who
+                refuse to sound like everyone else. Cinematic narratives,
+                conversion-tuned pages, and brand voices with a pulse.
+              </p>
+
+              <div class="mt-10 flex flex-wrap items-center gap-4">
+                <a
+                  href="#contact"
+                  class="btn-primary rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide"
+                >
+                  Start a project →
+                </a>
+                <a
+                  href="#portfolio"
+                  class="btn-ghost rounded-full px-5 py-3.5 text-sm font-semibold tracking-wide border border-charcoal/15"
+                >
+                  View selected work
+                </a>
+              </div>
+
+              <dl class="mt-14 grid grid-cols-3 gap-8 max-w-md">
+                <div>
+                  <dt
+                    class="text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal/50"
+                  >
+                    Brands shaped
+                  </dt>
+                  <dd
+                    class="mt-2 font-display text-3xl font-semibold text-charcoal"
+                  >
+                    84+
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal/50"
+                  >
+                    Avg. lift
+                  </dt>
+                  <dd
+                    class="mt-2 font-display text-3xl font-semibold text-charcoal"
+                  >
+                    2.3×
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="text-[11px] uppercase tracking-[0.18em] font-semibold text-charcoal/50"
+                  >
+                    Years writing
+                  </dt>
+                  <dd
+                    class="mt-2 font-display text-3xl font-semibold text-charcoal"
+                  >
+                    07
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="lg:col-span-5 flex items-center justify-center reveal">
+              <div class="relative w-full max-w-md">
+                <div
+                  class="aspect-[4/5] rounded-[28px] portrait-art shadow-[0_30px_60px_rgba(44,53,57,0.25)] relative overflow-hidden"
+                >
+                  <div
+                    class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[28px]"
+                  ></div>
+                  <div
+                    class="absolute bottom-5 left-5 right-5 flex items-center justify-between text-cream/90"
+                  >
+                    <div>
+                      <p
+                        class="text-[10px] uppercase tracking-[0.22em] opacity-70"
+                      >
+                        Creative director
+                      </p>
+                      <p class="font-display text-lg">Iris Lavigne</p>
+                    </div>
+                    <span
+                      class="text-[10px] uppercase tracking-[0.22em] opacity-70"
+                      >NYC · 2026</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="absolute -left-6 -bottom-6 bg-cream rounded-2xl px-5 py-4 shadow-tactile border border-charcoal/5"
+                >
+                  <p
+                    class="text-[10px] uppercase tracking-[0.2em] text-charcoal/50 font-semibold"
+                  >
+                    Now booking
+                  </p>
+                  <p class="font-display text-charcoal font-semibold">
+                    Q3 — 2 slots left
+                  </p>
+                </div>
+
+                <div
+                  class="absolute -right-4 -top-4 bg-charcoal text-cream rounded-full px-4 py-2 text-[11px] uppercase tracking-[0.2em] font-semibold shadow-tactile"
+                >
+                  ★ Featured · Brand Voice
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trusted-by strip -->
+        <div
+          class="max-w-7xl mx-auto mt-14 flex flex-wrap items-center justify-between gap-8 px-2 reveal"
+        >
+          <p
+            class="text-[11px] uppercase tracking-[0.22em] font-semibold text-charcoal/50"
+          >
+            Trusted by ambitious teams
+          </p>
+          <div
+            class="flex flex-wrap items-center gap-x-10 gap-y-4 font-display text-charcoal/40 text-xl"
+          >
+            <span>Marlowe&amp;Co.</span>
+            <span class="italic">Northbound</span>
+            <span class="font-semibold">PALOMA</span>
+            <span>Atlas Roastery</span>
+            <span class="italic">Verre</span>
+            <span class="font-semibold">FIELDNOTE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="px-6 lg:px-10 pt-32">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 reveal"
+          >
+            <div class="max-w-2xl">
+              <p
+                class="text-[11px] uppercase tracking-[0.22em] font-semibold text-burnt mb-4"
+              >
+                · Services
+              </p>
+              <h2
+                class="font-display font-semibold text-charcoal text-4xl sm:text-5xl leading-[1.05]"
+              >
+                Three ways to make your brand
+                <span class="italic text-burnt">sound</span> like itself.
+              </h2>
+            </div>
+            <p class="text-charcoal/65 max-w-md leading-relaxed">
+              Each engagement is hand-built — no templates, no offshore drafts.
+              Just one writer, deeply embedded in your story.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-7">
+            <!-- Card 1 -->
+            <article
+              class="tactile-card rounded-3xl p-8 lg:p-10 flex flex-col reveal"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-charcoal text-cream flex items-center justify-center shadow-tactile"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.6"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75A1.5 1.5 0 0 1 5.25 5.25h13.5a1.5 1.5 0 0 1 1.5 1.5v10.5a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V6.75Z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 9h16.5M7.5 12.75h6M7.5 15h4"
+                  />
+                </svg>
+              </div>
+              <p
+                class="mt-8 text-[11px] uppercase tracking-[0.2em] font-semibold text-burnt"
+              >
+                01 — Conversion
+              </p>
+              <h3
+                class="mt-2 font-display font-semibold text-2xl text-charcoal"
+              >
+                Website Copy
+              </h3>
+              <p class="mt-4 text-charcoal/65 leading-relaxed">
+                Home, product, and landing pages engineered to move readers
+                from scroll to signature — with voice intact.
+              </p>
+              <ul
+                class="mt-6 space-y-2 text-sm text-charcoal/70 border-t border-charcoal/10 pt-6"
+              >
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> Wireframed by section &amp;
+                  hierarchy
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> A/B-ready hero variants
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> SEO &amp; metadata pass
+                </li>
+              </ul>
+              <p
+                class="mt-8 font-display text-charcoal/80 text-lg"
+              >
+                from <span class="text-burnt font-semibold">$4,800</span>
+              </p>
+            </article>
+
+            <!-- Card 2 -->
+            <article
+              class="tactile-card rounded-3xl p-8 lg:p-10 flex flex-col reveal"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-burnt text-cream flex items-center justify-center shadow-tactile"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.6"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7.5 7.5 3l4.5 4.5L7.5 12 3 7.5Zm9 9 4.5-4.5L21 16.5 16.5 21 12 16.5Z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m12 7.5 4.5 4.5M7.5 12 12 16.5"
+                  />
+                </svg>
+              </div>
+              <p
+                class="mt-8 text-[11px] uppercase tracking-[0.2em] font-semibold text-burnt"
+              >
+                02 — Strategy
+              </p>
+              <h3
+                class="mt-2 font-display font-semibold text-2xl text-charcoal"
+              >
+                Content Strategy
+              </h3>
+              <p class="mt-4 text-charcoal/65 leading-relaxed">
+                Editorial maps, pillar content, and a 90-day publishing engine
+                so your team never stares at a blank page again.
+              </p>
+              <ul
+                class="mt-6 space-y-2 text-sm text-charcoal/70 border-t border-charcoal/10 pt-6"
+              >
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> Audience &amp; jobs-to-be-done
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> Pillar / cluster framework
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> Quarterly editorial calendar
+                </li>
+              </ul>
+              <p
+                class="mt-8 font-display text-charcoal/80 text-lg"
+              >
+                from <span class="text-burnt font-semibold">$3,200</span>
+              </p>
+            </article>
+
+            <!-- Card 3 -->
+            <article
+              class="tactile-card rounded-3xl p-8 lg:p-10 flex flex-col reveal"
+            >
+              <div
+                class="w-14 h-14 rounded-2xl bg-charcoal text-cream flex items-center justify-center shadow-tactile"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.6"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p
+                class="mt-8 text-[11px] uppercase tracking-[0.2em] font-semibold text-burnt"
+              >
+                03 — Voice
+              </p>
+              <h3
+                class="mt-2 font-display font-semibold text-2xl text-charcoal"
+              >
+                Brand Messaging
+              </h3>
+              <p class="mt-4 text-charcoal/65 leading-relaxed">
+                Positioning, tagline, manifesto, and the voice guide your team
+                will actually reach for — not bury in a Drive folder.
+              </p>
+              <ul
+                class="mt-6 space-y-2 text-sm text-charcoal/70 border-t border-charcoal/10 pt-6"
+              >
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> Positioning &amp; promise
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> Voice principles + examples
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-burnt">→</span> Tagline &amp; manifesto
+                </li>
+              </ul>
+              <p
+                class="mt-8 font-display text-charcoal/80 text-lg"
+              >
+                from <span class="text-burnt font-semibold">$5,600</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="px-6 lg:px-10 pt-32">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 reveal"
+          >
+            <div class="max-w-2xl">
+              <p
+                class="text-[11px] uppercase tracking-[0.22em] font-semibold text-burnt mb-4"
+              >
+                · Selected work
+              </p>
+              <h2
+                class="font-display font-semibold text-charcoal text-4xl sm:text-5xl leading-[1.05]"
+              >
+                Stories that
+                <span class="italic text-burnt">moved</span> the metric.
+              </h2>
+            </div>
+            <a
+              href="#contact"
+              class="self-start text-sm font-semibold text-charcoal/70 hover:text-burnt transition-colors"
+              >Full case studies on request →</a
+            >
+          </div>
+
+          <div class="grid md:grid-cols-6 gap-5">
+            <!-- Tile 1 (large) -->
+            <a
+              href="#"
+              class="portfolio-card group relative md:col-span-4 aspect-[16/10] rounded-3xl overflow-hidden shadow-tactile reveal"
+            >
+              <div
+                class="img absolute inset-0"
+                style="
+                  background:
+                    radial-gradient(70% 60% at 30% 30%, rgba(255,200,150,0.45) 0%, rgba(255,200,150,0) 60%),
+                    linear-gradient(135deg, #3a3026 0%, #8b6b4a 60%, #c98d59 100%);
+                  filter: saturate(0.65);
+                "
+              ></div>
+              <div
+                class="overlay absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/55 to-transparent"
+              ></div>
+              <div
+                class="absolute inset-0 p-8 lg:p-10 flex flex-col justify-between"
+              >
+                <span
+                  class="self-start text-[11px] uppercase tracking-[0.22em] font-semibold text-cream/90 px-3 py-1 rounded-full bg-charcoal/40 backdrop-blur-sm"
+                >
+                  Brand voice · DTC
+                </span>
+                <div
+                  class="text-cream translate-y-3 group-hover:translate-y-0 transition-transform duration-500"
+                >
+                  <p
+                    class="text-[11px] uppercase tracking-[0.22em] font-semibold opacity-80"
+                  >
+                    Atlas Roastery
+                  </p>
+                  <h3
+                    class="mt-2 font-display text-3xl lg:text-4xl font-semibold leading-tight"
+                  >
+                    From local grind to a national rebrand — +218% organic.
+                  </h3>
+                </div>
+              </div>
+            </a>
+
+            <!-- Tile 2 -->
+            <a
+              href="#"
+              class="portfolio-card group relative md:col-span-2 aspect-[4/5] md:aspect-auto rounded-3xl overflow-hidden shadow-tactile reveal"
+            >
+              <div
+                class="img absolute inset-0"
+                style="
+                  background:
+                    radial-gradient(80% 60% at 70% 20%, rgba(200,90,23,0.45) 0%, rgba(200,90,23,0) 60%),
+                    linear-gradient(160deg, #2c3539 0%, #5a4a3a 100%);
+                "
+              ></div>
+              <div
+                class="overlay absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/50 to-transparent"
+              ></div>
+              <div
+                class="absolute inset-0 p-7 lg:p-8 flex flex-col justify-between"
+              >
+                <span
+                  class="self-start text-[11px] uppercase tracking-[0.22em] font-semibold text-cream/90 px-3 py-1 rounded-full bg-charcoal/40 backdrop-blur-sm"
+                  >SaaS · Launch</span
+                >
+                <div class="text-cream">
+                  <p
+                    class="text-[11px] uppercase tracking-[0.22em] font-semibold opacity-80"
+                  >
+                    Northbound
+                  </p>
+                  <h3
+                    class="mt-2 font-display text-2xl font-semibold leading-tight"
+                  >
+                    A homepage that doubled trial-to-paid.
+                  </h3>
+                </div>
+              </div>
+            </a>
+
+            <!-- Tile 3 -->
+            <a
+              href="#"
+              class="portfolio-card group relative md:col-span-2 aspect-[4/5] md:aspect-auto rounded-3xl overflow-hidden shadow-tactile reveal"
+            >
+              <div
+                class="img absolute inset-0"
+                style="
+                  background:
+                    radial-gradient(70% 60% at 20% 80%, rgba(255,235,200,0.5) 0%, rgba(255,235,200,0) 60%),
+                    linear-gradient(135deg, #6b5a4a 0%, #2c3539 100%);
+                  filter: saturate(0.7);
+                "
+              ></div>
+              <div
+                class="overlay absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/55 to-transparent"
+              ></div>
+              <div
+                class="absolute inset-0 p-7 lg:p-8 flex flex-col justify-between"
+              >
+                <span
+                  class="self-start text-[11px] uppercase tracking-[0.22em] font-semibold text-cream/90 px-3 py-1 rounded-full bg-charcoal/40 backdrop-blur-sm"
+                  >Editorial · Hospitality</span
+                >
+                <div class="text-cream">
+                  <p
+                    class="text-[11px] uppercase tracking-[0.22em] font-semibold opacity-80"
+                  >
+                    Verre Hotels
+                  </p>
+                  <h3
+                    class="mt-2 font-display text-2xl font-semibold leading-tight"
+                  >
+                    A voice guide their concierge team can speak in.
+                  </h3>
+                </div>
+              </div>
+            </a>
+
+            <!-- Tile 4 (wide) -->
+            <a
+              href="#"
+              class="portfolio-card group relative md:col-span-4 aspect-[16/9] rounded-3xl overflow-hidden shadow-tactile reveal"
+            >
+              <div
+                class="img absolute inset-0"
+                style="
+                  background:
+                    radial-gradient(60% 70% at 80% 50%, rgba(200,90,23,0.5) 0%, rgba(200,90,23,0) 60%),
+                    linear-gradient(120deg, #1f2528 0%, #4a3a2a 70%, #b07a4a 100%);
+                  filter: saturate(0.75);
+                "
+              ></div>
+              <div
+                class="overlay absolute inset-0 bg-gradient-to-r from-charcoal/95 via-charcoal/60 to-transparent"
+              ></div>
+              <div
+                class="absolute inset-0 p-8 lg:p-10 flex flex-col justify-between"
+              >
+                <span
+                  class="self-start text-[11px] uppercase tracking-[0.22em] font-semibold text-cream/90 px-3 py-1 rounded-full bg-charcoal/40 backdrop-blur-sm"
+                  >Content strategy · Fintech</span
+                >
+                <div class="text-cream max-w-lg">
+                  <p
+                    class="text-[11px] uppercase tracking-[0.22em] font-semibold opacity-80"
+                  >
+                    PALOMA
+                  </p>
+                  <h3
+                    class="mt-2 font-display text-3xl lg:text-4xl font-semibold leading-tight"
+                  >
+                    90-day editorial engine. 11 ranking keywords. One writer.
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / Testimonial strip -->
+      <section id="about" class="px-6 lg:px-10 pt-32">
+        <div
+          class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center reveal"
+        >
+          <div class="lg:col-span-5">
+            <p
+              class="text-[11px] uppercase tracking-[0.22em] font-semibold text-burnt mb-4"
+            >
+              · About
+            </p>
+            <h2
+              class="font-display font-semibold text-charcoal text-4xl sm:text-5xl leading-[1.05]"
+            >
+              One writer. <br />
+              <span class="italic text-burnt">Wholly</span> on your project.
+            </h2>
+            <p class="mt-6 text-charcoal/65 leading-relaxed max-w-md">
+              No account managers, no junior handoffs. When you hire entrecopy,
+              you get me — start to finish — on a maximum of three engagements
+              at once.
+            </p>
+          </div>
+
+          <figure
+            class="lg:col-span-7 tactile-card rounded-3xl p-10 lg:p-14"
+          >
+            <svg
+              class="w-10 h-10 text-burnt"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M7 7h4v4H8c0 2 1 3 3 3v2c-3 0-5-2-5-5V7Zm8 0h4v4h-3c0 2 1 3 3 3v2c-3 0-5-2-5-5V7Z"
+              />
+            </svg>
+            <blockquote
+              class="mt-6 font-display text-2xl lg:text-3xl leading-snug text-charcoal"
+            >
+              Iris rewrote a homepage we'd been wrestling with for two years
+              in eleven days. Trial-to-paid doubled the month it shipped — and
+              for once, the copy actually sounds like us.
+            </blockquote>
+            <figcaption
+              class="mt-8 flex items-center gap-4 text-sm text-charcoal/70"
+            >
+              <span
+                class="w-12 h-12 rounded-full bg-charcoal text-cream flex items-center justify-center font-display font-semibold"
+                >MK</span
+              >
+              <div>
+                <p class="font-semibold text-charcoal">Marlowe Kent</p>
+                <p class="text-charcoal/55">CEO · Northbound</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="px-6 lg:px-10 pt-32 pb-24">
+        <div
+          class="max-w-7xl mx-auto bg-charcoal text-cream rounded-[36px] overflow-hidden shadow-[0_40px_80px_rgba(31,37,40,0.35)] relative"
+        >
+          <div
+            class="absolute inset-0 opacity-30 pointer-events-none"
+            style="
+              background:
+                radial-gradient(60% 60% at 0% 0%, rgba(200,90,23,0.25) 0%, transparent 60%),
+                radial-gradient(50% 50% at 100% 100%, rgba(255,200,150,0.08) 0%, transparent 60%);
+            "
+          ></div>
+
+          <div
+            class="relative grid lg:grid-cols-12 gap-12 px-8 sm:px-12 lg:px-16 py-16 lg:py-24"
+          >
+            <div class="lg:col-span-5 reveal">
+              <p
+                class="text-[11px] uppercase tracking-[0.22em] font-semibold text-burnt mb-4"
+              >
+                · Let's talk
+              </p>
+              <h2
+                class="font-display font-semibold text-4xl sm:text-5xl leading-[1.05]"
+              >
+                Tell me about <br />the project you<br />
+                <span class="italic text-burnt-light">can't stop</span>
+                thinking about.
+              </h2>
+              <p class="mt-6 text-cream/70 leading-relaxed max-w-sm">
+                I reply within one business day. If we're not a fit, I'll point
+                you to a writer who is.
+              </p>
+
+              <dl class="mt-12 space-y-6 text-sm">
+                <div>
+                  <dt
+                    class="text-[11px] uppercase tracking-[0.22em] text-cream/50 font-semibold"
+                  >
+                    Email
+                  </dt>
+                  <dd class="mt-2 text-cream/90">hello@entrecopy.studio</dd>
+                </div>
+                <div>
+                  <dt
+                    class="text-[11px] uppercase tracking-[0.22em] text-cream/50 font-semibold"
+                  >
+                    Studio
+                  </dt>
+                  <dd class="mt-2 text-cream/90">
+                    Brooklyn, NY — remote worldwide
+                  </dd>
+                </div>
+                <div>
+                  <dt
+                    class="text-[11px] uppercase tracking-[0.22em] text-cream/50 font-semibold"
+                  >
+                    Availability
+                  </dt>
+                  <dd class="mt-2 text-cream/90">
+                    Q3 2026 · accepting 2 projects
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <form
+              class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 reveal"
+              onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').textContent = 'Sent — talk soon ✓';"
+            >
+              <div class="sm:col-span-1">
+                <label class="block text-[11px] uppercase tracking-[0.2em] text-cream/60 font-semibold mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="Your full name"
+                  class="field w-full rounded-xl px-4 py-3.5 text-sm"
+                />
+              </div>
+              <div class="sm:col-span-1">
+                <label class="block text-[11px] uppercase tracking-[0.2em] text-cream/60 font-semibold mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  required
+                  placeholder="you@brand.com"
+                  class="field w-full rounded-xl px-4 py-3.5 text-sm"
+                />
+              </div>
+              <div class="sm:col-span-1">
+                <label class="block text-[11px] uppercase tracking-[0.2em] text-cream/60 font-semibold mb-2"
+                  >Company</label
+                >
+                <input
+                  type="text"
+                  placeholder="Brand or studio"
+                  class="field w-full rounded-xl px-4 py-3.5 text-sm"
+                />
+              </div>
+              <div class="sm:col-span-1">
+                <label class="block text-[11px] uppercase tracking-[0.2em] text-cream/60 font-semibold mb-2"
+                  >Service</label
+                >
+                <select class="field w-full rounded-xl px-4 py-3.5 text-sm">
+                  <option class="bg-charcoal">Website copy</option>
+                  <option class="bg-charcoal">Content strategy</option>
+                  <option class="bg-charcoal">Brand messaging</option>
+                  <option class="bg-charcoal">Not sure yet</option>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-[11px] uppercase tracking-[0.2em] text-cream/60 font-semibold mb-2"
+                  >Tell me about the project</label
+                >
+                <textarea
+                  rows="5"
+                  required
+                  placeholder="What are you launching, repositioning, or rewriting?"
+                  class="field w-full rounded-xl px-4 py-3.5 text-sm resize-none"
+                ></textarea>
+              </div>
+              <div class="sm:col-span-2 flex flex-wrap items-center justify-between gap-4 pt-2">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-cream/45">
+                  No newsletter. No spam. Just one reply.
+                </p>
+                <button
+                  type="submit"
+                  class="btn-primary rounded-full px-8 py-4 text-sm font-semibold tracking-wide"
+                >
+                  Send the brief →
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-6 lg:px-10 pb-12">
+      <div
+        class="max-w-7xl mx-auto pt-10 border-t border-charcoal/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+      >
+        <div class="flex items-center gap-3">
+          <span
+            class="font-display font-extrabold text-xl tracking-tight text-charcoal"
+          >
+            entrecop<span class="brand-y">y</span>
+          </span>
+          <span class="text-charcoal/50 text-sm">
+            © 2026 — Solo copywriting studio.
+          </span>
+        </div>
+        <div
+          class="flex items-center gap-6 text-sm text-charcoal/60 font-medium"
+        >
+          <a href="#" class="hover:text-burnt transition-colors">Instagram</a>
+          <a href="#" class="hover:text-burnt transition-colors">LinkedIn</a>
+          <a href="#" class="hover:text-burnt transition-colors">Read.cv</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>
